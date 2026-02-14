@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Shradha 💖</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Comic Sans MS',cursive;
+  background:linear-gradient(135deg,#ffd6e8,#fff6cc);
+  text-align:center;
+  padding:10px;
+}
+
+/* Card */
+.card{
+  width:100%;
+  max-width:800px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* Headings */
+h1{
+  color:#ff4d88;
+  font-size:clamp(24px,5vw,40px);
+}
+
+h2{
+  font-size:clamp(18px,4vw,26px);
+}
+
+/* Text */
+p{
+  font-size:clamp(14px,4vw,18px);
+}
+
+/* Button */
+button{
+  background:#ff4d88;
+  color:#fff;
+  border:none;
+  padding:12px 20px;
+  border-radius:20px;
+  font-size:clamp(14px,4vw,18px);
+  cursor:pointer;
+  width:100%;
+  max-width:300px;
+}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:12px;
+  margin:20px 0;
+}
+
+/* Flower */
+#mainFlower{
+  max-width:200px;
+  width:80%;
+  margin:auto;
+  border-radius:15px;
+  animation:float 2s ease-in-out infinite;
+}
+
+/* Footer */
+footer{
+  margin-top:20px;
+  color:#777;
+  font-size:14px;
+}
+
+/* Animation */
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+  100%{transform:translateY(0);}
+}
+
+/* Extra Mobile Tweaks */
+@media(max-width:480px){
+  .card{
+    padding:15px;
+    margin:10px auto;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1>Sorry meri dost 😭</h1>
+  <p>gaali de leakin maaf krde</p>
+
+  <button onclick="showLove()">Click kr isko please</button>
+
+  <div id="msg"></div>
+
+  <h2 id="flowersTitle" style="display:none;">Sorry Flowers for You 🌸</h2>
+
+  <div class="gallery" id="flowers" style="display:none; grid-template-columns:1fr;">
+    <img id="mainFlower" 
+      src="https://pinkocean.lt/cdn/shop/files/11-min_0dd472b3-1d3d-4467-b17b-7ac48dcab394.png?v=1696175003">
+  </div>
+
+  <footer>ab n krunga terepe gussa promise</footer>
+</div>
+
+<script>
+function showLove(){
+  const m=document.getElementById('msg');
+  m.innerHTML='<h3>For You 💗</h3><p>Sorry dost 🌷</p>';
+
+  const f=document.getElementById('flowers');
+  const t=document.getElementById('flowersTitle');
+
+  f.style.display='grid';
+  t.style.display='block';
+}
+</script>
+
+</body>
+</html>
